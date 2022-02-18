@@ -1,15 +1,14 @@
 ﻿using System.Reflection;
 using System.Runtime.InteropServices;
-using PKTVendorRewards;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle(PKTVendorRewards.ModName)]
+[assembly: AssemblyTitle(PKTVendorRewards.PKTVendorRewards.ModName)]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany(PKTVendorRewards.Author)]
-[assembly: AssemblyProduct(PKTVendorRewards.ModName)]
+[assembly: AssemblyCompany(PKTVendorRewards.PKTVendorRewards.Author)]
+[assembly: AssemblyProduct(PKTVendorRewards.PKTVendorRewards.ModName)]
 [assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -32,5 +31,5 @@ using PKTVendorRewards;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion(PKTVendorRewards.ModVersion)]
-[assembly: AssemblyFileVersion(PKTVendorRewards.ModVersion)]
+[assembly: AssemblyVersion(PKTVendorRewards.PKTVendorRewards.ModVersion)]
+[assembly: AssemblyFileVersion(PKTVendorRewards.PKTVendorRewards.ModVersion)]
