@@ -70,7 +70,7 @@ namespace PKTVendorRewards
             meadinvig.Name.English("Instant Invigoration"); 
             meadinvig.Description.English("Like Rested but better.");
 
-            GameObject runeslashvisual = ItemManager.PrefabManager.RegisterPrefab(PrefabManager.RegisterAssetBundle("meadslash"), "vfx_runeslash");
+            GameObject runeslashvfx = ItemManager.PrefabManager.RegisterPrefab("meadslash", "vfx_runeslash");
 
             //GameObject axeSound =
             //   ItemManager.PrefabManager.RegisterPrefab("ironfang", "axeSound"); // Same for special sound effects
