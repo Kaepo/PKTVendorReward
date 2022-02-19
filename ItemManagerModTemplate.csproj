@@ -109,13 +109,7 @@
   <ItemGroup>
     <EmbeddedResource Include="assets\knife_tarred" />
     <EmbeddedResource Include="assets\spear_puke" />
-    <EmbeddedResource Include="assets\meadhealthinstant" />
-    <EmbeddedResource Include="assets\meadrun" />
-    <EmbeddedResource Include="assets\meadblunt" />
-    <EmbeddedResource Include="assets\meadinvigorated" />
-    <EmbeddedResource Include="assets\meadlightning" />
-    <EmbeddedResource Include="assets\meadpierce" />
-    <EmbeddedResource Include="assets\meadslash" />
+    <EmbeddedResource Include="assets\battlerunes" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />

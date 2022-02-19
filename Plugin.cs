@@ -46,31 +46,31 @@ namespace PKTVendorRewards
             //healthinstant.Name.English("Instant Health Potion"); // You can use this to fix the display name in code
             //healthinstant.Description.English("75 instant health.");
 
-            Item meadrun = new("meadrun", "MeadRun");
+            Item meadrun = new("battlerunes", "MeadRun");
             meadrun.Name.English("Instant Run Speed Potion");
             meadrun.Description.English("10 run speed bonus.");
 
-            Item meadblunt = new("meadblunt", "MeadBlunt");
+            Item meadblunt = new("battlerunes", "MeadBlunt");
             meadblunt.Name.English("Blunt Resistance");
             meadblunt.Description.English("Strong blunt resistance.");
 
-            Item meadpierce = new("meadpierce", "MeadPierce");
+            Item meadpierce = new("battlerunes", "MeadPierce");
             meadpierce.Name.English("Pierce Resistance"); 
             meadpierce.Description.English("Strong pierce resistance.");
 
-            Item meadslash = new("meadslash", "MeadSlash");
+            Item meadslash = new("battlerunes", "MeadSlash");
             meadslash.Name.English("Slash Resistance");
             meadslash.Description.English("Strong slash resistance.");
 
-            Item meadlightning = new("meadlightning", "MeadLightning");
+            Item meadlightning = new("battlerunes", "MeadLightning");
             meadlightning.Name.English("Lightning Resistance"); 
             meadlightning.Description.English("Strong lightning resistance.");
 
-            Item meadinvig = new("meadinvigorated", "MeadInvigorated");
+            Item meadinvig = new("battlerunes", "MeadInvigorated");
             meadinvig.Name.English("Instant Invigoration"); 
             meadinvig.Description.English("Like Rested but better.");
 
-            GameObject runeslashvfx = ItemManager.PrefabManager.RegisterPrefab("meadslash", "vfx_runeslash");
+            //GameObject runeslashvfx = ItemManager.PrefabManager.RegisterPrefab("battlerunes", "vfx_runeslash");
 
             //GameObject axeSound =
             //   ItemManager.PrefabManager.RegisterPrefab("ironfang", "axeSound"); // Same for special sound effects
