@@ -8,21 +8,17 @@ using ItemManager;
 using ServerSync;
 using UnityEngine;
 
-namespace PKTVendorRewards
+namespace PTKRewards
 {
     [BepInPlugin(ModGUID, ModName, ModVersion)]
-    public class PKTVendorRewards : BaseUnityPlugin
+    public class PTKRewards : BaseUnityPlugin
     {
-        internal const string ModName = "PKTVendorRewards";
-        internal const string ModVersion = "1.0.1";
-        internal const string Author = "kaepo";
-        private const string ModGUID = Author + "." + ModName;
+        private const string ModName = "PTKRewards";
+        private const string ModVersion = "1.0";
+        private const string ModGUID = "kaepo.PTKRewards";
+        private static Harmony harmony = null!;
         private static string ConfigFileName = ModGUID + ".cfg";
         private static string ConfigFileFullPath = Paths.ConfigPath + Path.DirectorySeparatorChar + ConfigFileName;
-
-        internal static string ConnectionError = "";
-
-        private readonly Harmony _harmony = new(ModGUID);
 
         public static readonly ManualLogSource PKTVendorRewardsLogger =
             BepInEx.Logging.Logger.CreateLogSource(ModName);
@@ -32,6 +28,11 @@ namespace PKTVendorRewards
 
         public void Awake()
         {
+            
+            Assembly assembly = Assembly.GetExecutingAssembly();
+            harmony = new(ModGUID);
+            harmony.PatchAll(assembly);
+            
             _serverConfigLocked = config("General", "Force Server Config", true, "Force Server Config");
             _ = ConfigSync.AddLockingConfigEntry(_serverConfigLocked);
 
@@ -70,19 +71,16 @@ namespace PKTVendorRewards
             meadinvig.Name.English("Instant Invigoration"); 
             meadinvig.Description.English("Like Rested but better.");
 
-            //GameObject runeslashvfx = ItemManager.PrefabManager.RegisterPrefab("battlerunes", "vfx_runeslash");
+            GameObject runeslashvfx = ItemManager.PrefabManager.RegisterPrefab("battlerunes", "vfx_runeslash");
+            
 
-            //GameObject axeSound =
-            //   ItemManager.PrefabManager.RegisterPrefab("ironfang", "axeSound"); // Same for special sound effects
-
-            Assembly assembly = Assembly.GetExecutingAssembly();
-            _harmony.PatchAll(assembly);
             SetupWatcher();
         }
 
         private void OnDestroy()
         {
             Config.Save();
+            harmony.UnpatchSelf();
         }
 
         private void SetupWatcher()
